@@ -6,9 +6,26 @@
     <servlet>
         <servlet-name>first_servlet</servlet-name>
         <servlet-class>com.me.FirstServlet</servlet-class>
+        <init-param>
+            <param-name>input1</param-name>
+            <param-value>123</param-value>
+        </init-param>
+        <init-param>
+            <param-name>input2</param-name>
+            <param-value>456</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>first_servlet</servlet-name>
         <url-pattern>/fs</url-pattern>
     </servlet-mapping>
+    <context-param>
+        <param-name>input1</param-name>
+        <param-value>app-123</param-value>
+    </context-param>
+    <context-param>
+        <param-name>input2</param-name>
+        <param-value>app-456</param-value>
+    </context-param>
+
 </web-app>

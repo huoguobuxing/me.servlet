@@ -18,5 +18,14 @@ public class FirstServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.write("<h1> my first servlet </h1>");
 
+        // 测试该servlet的输入参数
+        out.println("<br/>current servlet parameters : " + getServletConfig().getInitParameter("input1"));
+        out.println("<br/>current servlet parameters : " + getServletConfig().getInitParameter("input2"));
+
+        // 测试整个应用的输入参数
+        out.println("<br/>current app parameters : " + getServletContext().getInitParameter("input1"));
+        out.println("<br/>current app parameters : " + getServletContext().getInitParameter("input2"));
+
+
     }
 }
