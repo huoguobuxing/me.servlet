@@ -13,7 +13,13 @@ public class FirstServlet extends HttpServlet {
     private Logger logger = Logger.getLogger(FirstServlet.class.getName());
 
     @Override
+    public void init() throws ServletException {
+        logger.info("FirstServlet init() execute.");
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        logger.info("FirstServlet doGet() execute.");
 
         // 设置:响应内容类型
         resp.setContentType("text/html");
@@ -29,7 +35,10 @@ public class FirstServlet extends HttpServlet {
         // 测试整个应用的输入参数
         out.println("<br/>current app parameters : " + getServletContext().getInitParameter("input1"));
         out.println("<br/>current app parameters : " + getServletContext().getInitParameter("input2"));
+    }
 
-
+    @Override
+    public void destroy() {
+        logger.info("FirstServlet destroy() execute.");
     }
 }
