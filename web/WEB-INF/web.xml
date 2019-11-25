@@ -28,4 +28,21 @@
         <param-value>app-456</param-value>
     </context-param>
 
+    <listener>
+        <listener-class>com.me.MyFirstServletContextListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.me.MyFirstServletRequestAttributeListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.me.MyFirstServletRequestListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.me.MyFirstServletContextAttributeListener</listener-class>
+    </listener>
+
+
 </web-app>
