@@ -15,6 +15,24 @@
             <param-value>456</param-value>
         </init-param>
     </servlet>
+    <filter>
+        <filter-name>myFirstFilter1</filter-name>
+        <filter-class>com.me.FirstFilter1</filter-class>
+    </filter>
+    <filter>
+        <filter-name>myFirstFilter2</filter-name>
+        <filter-class>com.me.FirstFilter2</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>myFirstFilter1</filter-name>
+        <url-pattern>/fs</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>myFirstFilter2</filter-name>
+        <url-pattern>/fs</url-pattern>
+    </filter-mapping>
+
     <servlet-mapping>
         <servlet-name>first_servlet</servlet-name>
         <url-pattern>/fs</url-pattern>
