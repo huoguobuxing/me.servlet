@@ -1,5 +1,3 @@
-import com.me.FirstServlet;
-
 import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
